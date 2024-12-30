@@ -1,0 +1,155 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6c6d6c, #141414);
+    color: #ffffff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стили для хедера и навигации */
+header {
+    background: #141414;
+    padding: 14px 0; /* Уменьшен отступ у хедера */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0);
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Элементы меню переходят на новую строку при необходимости */
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 8px; /* Уменьшен размер кнопок */
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background: hsl(60, 3%, 15%);
+}
+
+.navbar li a:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Главный блок страницы */
+main {
+    flex: 1;
+    padding: 50px 20px;
+}
+
+main h1 {
+    font-size: 2rem; /* Уменьшен размер заголовка */
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+main p {
+    font-size: 1rem; /* Уменьшен размер текста */
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+/* Стили для футера */
+footer {
+    background: #141414;
+    padding: 3px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-align: center;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопки */
+button, a.button {
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    padding: 8px 10px; /* Уменьшены отступы */
+    font-size: 10px; /* Уменьшен размер текста кнопок */
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover, a.button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Выравнивание кнопок по горизонтали */
+    gap: 10px;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    main p {
+        line-height: 1.5;
+    }
+}
+.contact-info {
+    background-color: #2e2e2e; /* Тёмно-серый фон */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #e0e0e0; /* Серебряный текст */
+}
+
+.contact-info a {
+    color: #82b1ff; /* Голубой цвет для ссылок */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #4fc3f7; /* Светло-голубой при наведении */
+}
